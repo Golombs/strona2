@@ -27,9 +27,62 @@
      border-color: green;
     
 }
+.navbar{
+width: 85%;
+margin: auto;
+padding: 35px 0;
+display: flex;
+align-items: center;
+justify-content: space-between;
+
+}
+.logo{
+    width: 120px;
+    cursor: pointer;
+
+
+}
+.navbar ul li{
+list-style: none ;
+display: inline-block;
+margin: 0 20px;
+position: relative;
+cursor: pointer
+
+}
+
+.navbar ul li {
+text-decoration: none;
+color: rgb(0, 0, 0);
+text-transform: uppercase;
+
+}
+.navbar ul li::after{
+content: '';
+height: 3px;
+width: 0;
+background: #376602;
+position: absolute;
+left: 0;
+bottom: -5px;
+transition: 0.5s ;
+}
+.navbar ul li:hover:after{
+width: 100%;
+
+}
+
 </style>
 <body>
 <center>
+
+    <div class="navbar">
+        <img src="BEAR_Icon.png"  class="logo">
+        <ul>
+          <li onclick="location.href='https://golombs.github.io/MainStrona/StronaGłówna.html'">Home</li>
+        </ul>
+    </div>
+
 
 <table style="width:80%">
   <tr>
@@ -76,7 +129,7 @@
     <dd><h3>to człowiek pochodzący z Naboo. W młodości został uczniem lorda Sith Dartha Plagueisa. Udało mu się zrealizować cel Sithów - zniszczyć Republikę. Utworzył Imperium Galaktyczne i ogłosił się Imperatorem, jednak w wyniku rebelii został obalony, zabity i odnowiono Republikę</h3></dd>
     </dl>
 
-</center>
+
 
   <h3>Filmy Star Wars:</h3>
 
@@ -132,7 +185,7 @@
   </ol>  
 
 
-
+</center>
 	
 
 
