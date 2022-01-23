@@ -72,14 +72,44 @@ width: 100%;
 
 }
 
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 40%;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: rgb(45, 231, 216);
+}
+
+.content {
+  border-radius: 10px;
+  padding: 0 18px;
+  width: 75%;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #999595;
+}
+
+
+
 </style>
+<!-- .Cllapsible , .active ,.collapsoble:hover , .conntent css do otwieranego okna   -->
+
 <body>
 <center>
 
     <div class="navbar">
         <img src="BEAR_Icon.png"  class="logo">
         <ul>
-          <li onclick="location.href='https://golombs.github.io/MainStrona/StronaGłówna.html'">Home</li>
+          <li onclick="location.href='https://golombs.github.io/MainStrona/StronaGłówna.html' ">Home</li>
         </ul>
     </div>
 
@@ -109,7 +139,18 @@ width: 100%;
 
 
 </table>
+
+ <!-- Otwierne okno  -->
+
+
+
 <h2>Postacie filmowe Star Wars I-III</h2>
+
+
+<button type="button" class="collapsible">Anakin Skywalker</button>
+<div class="content">
+  <h2 style="color: white;">kluczowa postać serii filmowej Gwiezdne wojny. Silny Mocą, odkryty przez mistrza Jedi Qui-Gon Jinna, stał się jednym z najsłynniejszych rycerzy Jedi okresu schyłku Republiki, jednak zmanipulowany przez Sitha Palpatine'a pomógł zniszczyć Republikę i Zakon Jedi przechodząc na Ciemną stronę Mocy. Tuż przed śmiercią, z pomocą swojego syna Luke'a Skywalkera powrócił na Jasną stronę Mocy i doprowadził do upadku Imperium oraz rządzących nim Sithów. Anakin posługiwał się IV Formą walki (Djem So/Shien) oraz pierwotnie mieczem świetlnym o niebieskim ostrzu, później o czerwonym ostrzu.</h2>
+</div>
 
 <dl>
     <dt><h2>Anakin Skywalker</h2></dt>
@@ -184,6 +225,24 @@ width: 100%;
     </ul>  </li>
   </ol>  
 
+ <!-- Skrypt do okna  -->
+ <script>
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
+  
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.maxHeight){
+        content.style.maxHeight = null;
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+      } 
+    });
+  }
+  </script>
+  
 
 </center>
 	
