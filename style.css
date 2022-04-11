@@ -1,0 +1,40 @@
+.center {
+              text-align: center;
+              margin: auto;
+              width: 60%;
+              border: 3px solid #ee0c1f;
+              padding: 10px;
+            }
+
+            .center2 {
+                text-align: center;
+                margin: auto;
+                width: 60%;
+                background-color: whitesmoke;
+                background-size: 10%;
+                padding: 5px;
+                width: 20%;
+            }
+            .center3 {
+                text-align: center;
+                margin: auto;
+                width: 20%;
+                
+            }
+            body{
+                margin: 0;
+                padding: 0;
+            
+                background: url(starwars2.png) no-repeat;
+                background-size: cover;
+            
+            
+            }
+            h4{
+                background-color: whitesmoke;
+                background-size: 10%;
+                padding: 5px;
+                width: 20%;
+                
+            }
+           
